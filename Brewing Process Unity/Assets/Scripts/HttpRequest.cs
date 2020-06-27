@@ -12,24 +12,26 @@ public class HttpRequest : MonoBehaviour
     [SerializeField]
     private string APIUrl;
 
-    void Start()
+    void Awake()
     {
         errorWindow = gameObject.GetComponentInChildren<ErrorWindow>();   
     }
 
-    public IEnumerator GetRequest<T>(string sufixo, Dictionary<string, string> requestHeaders, Action<T> callbackSuccess)
+    public IEnumerator GetRequest<T>(string sufixo, Action<T> callbackSuccess, Dictionary<string, string> requestHeaders = null)
     {
         var request = UnityWebRequest.Get($"{APIUrl}/{sufixo}");
 
-        SetRequestHeaders(requestHeaders, request);
+        if (requestHeaders != null)
+        {
+            SetRequestHeaders(requestHeaders, request);
+        }
 
         yield return request.SendWebRequest();
 
         HandleRequest(callbackSuccess, request);
-
     }
 
-    public IEnumerator PostRequest<T>(string sufixo, object body, Dictionary<string, string> requestHeaders, Action<T> callbackSuccess)
+    public IEnumerator PostRequest<T>(string sufixo, object body, Action<T> callbackSuccess, Dictionary<string, string> requestHeaders = null)
     {
         UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
         request.method = UnityWebRequest.kHttpVerbPOST;
@@ -39,7 +41,7 @@ public class HttpRequest : MonoBehaviour
         HandleRequest(callbackSuccess, request);
     }
 
-    public IEnumerator PutRequest<T>(string sufixo, object body, Dictionary<string, string> requestHeaders, Action<T> callbackSuccess)
+    public IEnumerator PutRequest<T>(string sufixo, object body, Action<T> callbackSuccess, Dictionary<string, string> requestHeaders = null)
     {
         UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
         request.method = UnityWebRequest.kHttpVerbPUT;
@@ -49,7 +51,7 @@ public class HttpRequest : MonoBehaviour
         HandleRequest(callbackSuccess, request);
     }
 
-    public IEnumerator DeleteRequest<T>(string sufixo, object body, Dictionary<string, string> requestHeaders, Action<T> callbackSuccess)
+    public IEnumerator DeleteRequest<T>(string sufixo, object body, Action<T> callbackSuccess, Dictionary<string, string> requestHeaders = null)
     {
         UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
         request.method = UnityWebRequest.kHttpVerbDELETE;
@@ -74,7 +76,10 @@ public class HttpRequest : MonoBehaviour
         var request = new UnityWebRequest($"{APIUrl}/{sufixo}");
         request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson));
         request.downloadHandler = new DownloadHandlerBuffer();
-        SetRequestHeaders(requestHeaders, request);
+        if (requestHeaders != null)
+        {
+            SetRequestHeaders(requestHeaders, request);
+        }
         return request;
     }
 
@@ -90,17 +95,25 @@ public class HttpRequest : MonoBehaviour
         }
         else
         {
-            var responseBody = JsonUtility.FromJson<T>(request.downloadHandler.text);
+            var responseBody = JsonUtility.FromJson<BaseResponse<T>>(request.downloadHandler.text);
             Debug.Log("Request Success. \n" +
                 $"Status Code: {request.responseCode} \n" +
                 $"Response: {responseBody}");
-            callbackSuccess(responseBody);
+            callbackSuccess(responseBody.data);
         }
     }
 
     private void HandleError(string errorMessage)
     {
         errorWindow.ShowError(errorMessage);
+    }
+
+    [Serializable]
+    public class BaseResponse<R>
+    {
+        public DateTime executed;
+
+        public R data;
     }
 
     [Serializable]
