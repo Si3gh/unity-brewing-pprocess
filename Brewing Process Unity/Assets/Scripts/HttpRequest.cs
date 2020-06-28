@@ -10,7 +10,7 @@ public class HttpRequest : MonoBehaviour
     private ErrorWindow errorWindow;
 
     [SerializeField]
-    private string APIUrl;
+    private string APIUrl = null;
 
     void Awake()
     {
@@ -73,9 +73,13 @@ public class HttpRequest : MonoBehaviour
     private UnityWebRequest BuildWebRequest(string sufixo, object body, Dictionary<string, string> requestHeaders)
     {
         var bodyAsJson = JsonUtility.ToJson(body);
-        var request = new UnityWebRequest($"{APIUrl}/{sufixo}");
-        request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson));
-        request.downloadHandler = new DownloadHandlerBuffer();
+        
+        var request = new UnityWebRequest($"{APIUrl}/{sufixo}")
+        {
+            uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson)),
+            downloadHandler = new DownloadHandlerBuffer()
+        };
+
         if (requestHeaders != null)
         {
             SetRequestHeaders(requestHeaders, request);
@@ -91,7 +95,7 @@ public class HttpRequest : MonoBehaviour
             Debug.LogError("Request error. \n" +
                 $"Status Code: {request.responseCode}\n" +
                 $"Response: {errorBody}");
-            HandleError(errorBody.data.message);
+            HandleError(errorBody?.data.message);
         }
         else
         {
