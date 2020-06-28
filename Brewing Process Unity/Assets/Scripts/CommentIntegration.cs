@@ -6,22 +6,30 @@ using UnityEngine;
 
 public class CommentIntegration : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI commentTextField;
+    [SerializeField] 
+    private TextMeshProUGUI commentTextField = null;
 
-    [SerializeField] private List<GameObject> historyElements = new List<GameObject>();
+    [SerializeField] 
+    private List<GameObject> historyElements = new List<GameObject>();
+
+    [SerializeField]
+    private List<ButtonSelect> fillHistoryelements = new List<ButtonSelect>();
 
     private HttpRequest _httpRequest;
 
-    private List<CommentDto> _comments = new List<CommentDto>();
+    private readonly List<CommentDto> comments = new List<CommentDto>();
 
-    private int _currentIndex = 0;
-
-    private List<CommentDto> _currentIndexComments => _comments.Where(comment => comment.stageIndex == _stageIndex)
+    private List<CommentDto> CurrentIndexComments => comments
+        .Where(comment => comment.stageIndex == _stageIndex)
         .ToList();
 
-    private int _maxCommentSize => _comments.Count(comment => comment.stageIndex == _stageIndex);
+    private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
+    
+    private int _currentIndex;
 
     private int _stageIndex;
+
+    private bool wasUsed;
 
     void Awake()
     {
@@ -33,16 +41,23 @@ public class CommentIntegration : MonoBehaviour
         StartCoroutine(_httpRequest.GetRequest<CommentDto[]>($"comment/{stage}", InitObject));
     }
 
+    public int GetMaxNumberOfComments(int stageIndex)
+    {
+        return comments.Count(comment => comment.stageIndex == stageIndex);
+    }
+
     private void InitObject(CommentDto[] comments)
     {
-        _comments.AddRange(comments);
+        wasUsed = false;
+        this.comments.AddRange(comments);
         SetText();
         EnableHistory();
+        FillButton();
     }
 
     private void EnableHistory()
     {
-        var enabledHistorySize = _maxCommentSize > historyElements.Count ? historyElements.Count : _maxCommentSize;
+        var enabledHistorySize = MaxCommentSize > historyElements.Count ? historyElements.Count : MaxCommentSize;
         foreach (var historyElement in historyElements)
         {
             historyElement.SetActive(false);
@@ -56,10 +71,20 @@ public class CommentIntegration : MonoBehaviour
 
     public void ShowCommentsInStageDialog(int stageIndex)
     {
-        if (_comments.Any(comment => comment.stageIndex == stageIndex))
+        if (stageIndex == _stageIndex && wasUsed)
         {
-            _stageIndex = stageIndex;
             EnableHistory();
+            SetText();
+            return;
+        }
+
+        if (comments.Any(comment => comment.stageIndex == stageIndex))
+        {
+            EnableHistory();
+            SetText();
+
+            wasUsed = true;
+            _stageIndex = stageIndex;
         }
         else
         {
@@ -69,7 +94,7 @@ public class CommentIntegration : MonoBehaviour
 
     public void ShowNext()
     {
-        if (_currentIndexComments.Count > _currentIndex + 1)
+        if (CurrentIndexComments.Count > _currentIndex + 1)
         {
             _currentIndex++;
         }
@@ -89,15 +114,26 @@ public class CommentIntegration : MonoBehaviour
 
     private void SetText()
     {
-        if (_currentIndexComments.Count > _currentIndex)
+        if (CurrentIndexComments.Count > _currentIndex)
         {
-            commentTextField.text = _currentIndexComments[_currentIndex].comment;
+            commentTextField.text = CurrentIndexComments[_currentIndex].comment;
+            FillButton();
         }
+    }
+
+    private void FillButton()
+    {
+        foreach (var buttonFill in fillHistoryelements)
+        {
+            buttonFill.Disable();
+        }
+
+        fillHistoryelements[_currentIndex].Enable();
     }
 
     public void ShowByIndex(int index)
     {
-        if (_comments.Count > index && index >= 0)
+        if (comments.Count > index && index >= 0)
         {
             _currentIndex = index;
         }

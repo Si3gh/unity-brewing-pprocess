@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DialogueTransition : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class DialogueTransition : MonoBehaviour
     //}
 
     [SerializeField]
-    private GameObject dialogueHistory;
+    private GameObject dialogueHistory = null;
 
     public void ActivateDialogueButton()
     {
