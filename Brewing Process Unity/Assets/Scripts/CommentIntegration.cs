@@ -80,11 +80,11 @@ public class CommentIntegration : MonoBehaviour
 
         if (comments.Any(comment => comment.stageIndex == stageIndex))
         {
+            _stageIndex = stageIndex;
+            wasUsed = true;
+
             EnableHistory();
             SetText();
-
-            wasUsed = true;
-            _stageIndex = stageIndex;
         }
         else
         {

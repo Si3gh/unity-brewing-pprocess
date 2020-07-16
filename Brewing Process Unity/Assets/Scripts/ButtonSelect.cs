@@ -8,7 +8,7 @@ public class ButtonSelect : MonoBehaviour
     private float fillAmmount = 0;
     private float fillSpeed = 2;
 
-    void Start()
+    void Awake()
     {
         image = gameObject.GetComponent<Image>();
     }
