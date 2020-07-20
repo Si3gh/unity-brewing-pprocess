@@ -3,29 +3,35 @@
 public class GrainProcessor : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private int potencyIncreaseAmount;
-    [SerializeField] private int potencyDecreaseAmount;
-    [SerializeField] [Range(0, 10)] private float decreaseSpeed = 5;
-    [SerializeField] [Range(0, 100)] private float inititalPotency = 50;
     [SerializeField] private BoxCollider boxCollider;
 #pragma warning restore 0649
 
-    private float currentPotency;
+    private int _potencyIncreaseAmount;
+    private int _potencyDecreaseAmount;
+    private float _decreaseSpeed;
+    private float _inititalPotency;
+    private float _currentPotency;
     private MachineController _machineController;
 
-    public float CurrentPotency => currentPotency;
+    public float CurrentPotency => _currentPotency;
     public BoxCollider Collider => boxCollider;
 
     public void Start()
     {
         _machineController = FindObjectOfType<MachineController>();
+
+        var config = FindObjectOfType<GrinderConfiguration>();
+        _potencyIncreaseAmount = config.PotencyIncreaseAmount;
+        _potencyDecreaseAmount = config.PotencyDecreaseAmount;
+        _decreaseSpeed = config.DecreaseSpeed;
+        _inititalPotency = config.InititalPotency;
     }
 
     public void Update()
     {
         if (_machineController.MachineOn)
         {
-            currentPotency -= Time.deltaTime * decreaseSpeed;
+            _currentPotency -= Time.deltaTime * _decreaseSpeed;
         }
     }
 
@@ -36,8 +42,8 @@ public class GrainProcessor : MonoBehaviour
             return;
         }
 
-        currentPotency += potencyIncreaseAmount;
-        if (currentPotency > _machineController.MaxPotency)
+        _currentPotency += _potencyIncreaseAmount;
+        if (_currentPotency > _machineController.MaxPotency)
         {
             _machineController.StopMachine();
         }
@@ -50,8 +56,8 @@ public class GrainProcessor : MonoBehaviour
             return;
         }
 
-        currentPotency -= potencyDecreaseAmount;
-        if (currentPotency < _machineController.MinPotency)
+        _currentPotency -= _potencyDecreaseAmount;
+        if (_currentPotency < _machineController.MinPotency)
         {
             _machineController.StopMachine();
         }
@@ -59,6 +65,6 @@ public class GrainProcessor : MonoBehaviour
 
     internal void ResetPotency()
     {
-        currentPotency = inititalPotency;
+        _currentPotency = _inititalPotency;
     }
 }

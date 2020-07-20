@@ -5,9 +5,9 @@ public class GrainStock : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] Grain[] grains;
-    [SerializeField] private float secondsSpentInProcessor = 5;
 #pragma warning restore 0649
 
+    private float _secondsSpentInProcessor = 5;
     private Stack<Grain> storedGrains;
 
     public int RemainingGrains => storedGrains.Count;
@@ -15,6 +15,9 @@ public class GrainStock : MonoBehaviour
     public void Start()
     {
         ReestockGrains();
+
+        var config = FindObjectOfType<GrinderConfiguration>();
+        _secondsSpentInProcessor = config.SecondsSpentInProcessor;
     }
 
     internal void ReestockGrains()
@@ -22,7 +25,7 @@ public class GrainStock : MonoBehaviour
         storedGrains = new Stack<Grain>(grains);
         foreach (var grain in storedGrains)
         {
-            grain.ResetGrain(secondsSpentInProcessor);
+            grain.ResetGrain(_secondsSpentInProcessor);
         }
     }
 

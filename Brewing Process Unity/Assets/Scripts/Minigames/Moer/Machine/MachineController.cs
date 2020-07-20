@@ -2,18 +2,15 @@
 
 public class MachineController : MonoBehaviour
 {
-#pragma warning disable 0649
-    [SerializeField] private int quantityToCollect = 20;
-    [SerializeField] private float TimerValue = 50;
-#pragma warning restore 0649
-
+    private int _quantityToCollect = 20;
+    private float _timerValue = 50;
     private ScoreIntegration _scoreIntegration;
     private float remainingTime;
     private GrainProcessor _grainProcessor;
     private GrainColector _grainColector;
     private GrainStock _grainStock;
 
-    public int QuantityToCollect => quantityToCollect;
+    public int QuantityToCollect => _quantityToCollect;
     public float RemainingTime => remainingTime;
     public bool MachineOn { get; private set; }
     public float MinPotency { get; private set; } = 0;
@@ -25,7 +22,10 @@ public class MachineController : MonoBehaviour
         _grainColector = FindObjectOfType<GrainColector>();
         _grainStock = FindObjectOfType<GrainStock>();
         _scoreIntegration = FindObjectOfType<ScoreIntegration>();
-        
+
+        var config = FindObjectOfType<GrinderConfiguration>();
+        _quantityToCollect = config.QuantityToCollect;
+        _timerValue = config.TimerValue;
     }
 
     public void Update()
@@ -38,7 +38,7 @@ public class MachineController : MonoBehaviour
 
     public void StartMachine()
     {
-        remainingTime = TimerValue;
+        remainingTime = _timerValue;
         MachineOn = true;
         _grainProcessor.ResetPotency();
         _grainColector.ResetCollector();
