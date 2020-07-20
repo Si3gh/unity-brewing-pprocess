@@ -3064,7 +3064,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1105209128}
   - component: {fileID: 1105209129}
-  - component: {fileID: 1105209130}
   m_Layer: 0
   m_Name: SeedColectoArea
   m_TagString: Untagged
@@ -3099,19 +3098,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33566624, y: 0.018665021, z: 0.60595816}
   m_Center: {x: 0, y: 0, z: -0.012053524}
---- !u!114 &1105209130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105209127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bfd4b6edb255e54981b4b8e523e9361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
 --- !u!1001 &1121903083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4154,7 +4140,7 @@ MonoBehaviour:
   - {fileID: 235156367}
   - {fileID: 1988183647}
   - {fileID: 1167424556}
-  secondsSpentInProcessor: 10
+  secondsSpentInProcessor: 5
 --- !u!1 &1549572922
 GameObject:
   m_ObjectHideFlags: 0
