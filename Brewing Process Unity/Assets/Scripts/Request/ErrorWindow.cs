@@ -1,22 +1,25 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class ErrorWindow : MonoBehaviour
+namespace Request
 {
-    [SerializeField]
-    private TextMeshProUGUI textField = null;
-
-    [SerializeField]
-    private GameObject window = null;
-
-    public void ShowError(string errorMessage)
+    public class ErrorWindow : MonoBehaviour
     {
-        window.SetActive(true);
-        textField.text = "Parece que houve um erro";
+        [SerializeField]
+        private TextMeshProUGUI textField = null;
 
-        if (errorMessage.Length != 0)
+        [SerializeField]
+        private GameObject window = null;
+
+        public void ShowError(string errorMessage)
         {
-            textField.text = errorMessage;
+            window.SetActive(true);
+            textField.text = "Parece que houve um erro";
+
+            if (errorMessage.Length != 0)
+            {
+                textField.text = errorMessage;
+            }
         }
     }
 }

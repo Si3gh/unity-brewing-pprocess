@@ -4,148 +4,151 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class CommentIntegration : MonoBehaviour
+namespace Request.Comment
 {
-    [SerializeField] 
-    private TextMeshProUGUI commentTextField = null;
+    public class CommentIntegration : MonoBehaviour
+    {
+        [SerializeField] 
+        private TextMeshProUGUI commentTextField = null;
 
-    [SerializeField] 
-    private List<GameObject> historyElements = new List<GameObject>();
+        [SerializeField] 
+        private List<GameObject> historyElements = new List<GameObject>();
 
-    [SerializeField]
-    private List<ButtonSelect> fillHistoryelements = new List<ButtonSelect>();
+        [SerializeField]
+        private List<ButtonSelect> fillHistoryElements = new List<ButtonSelect>();
 
-    private HttpRequest _httpRequest;
+        private HttpRequest _httpRequest;
 
-    private readonly List<CommentDto> comments = new List<CommentDto>();
+        private readonly List<CommentDto> _comments = new List<CommentDto>();
 
-    private List<CommentDto> CurrentIndexComments => comments
-        .Where(comment => comment.stageIndex == _stageIndex)
-        .ToList();
+        private List<CommentDto> CurrentIndexComments => _comments
+            .Where(comment => comment.stageIndex == _stageIndex)
+            .ToList();
 
-    private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
+        private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
     
-    private int _currentIndex;
+        private int _currentIndex;
 
-    private int _stageIndex;
+        private int _stageIndex;
 
-    private bool wasUsed;
+        private bool _wasUsed;
 
-    void Awake()
-    {
-        _httpRequest = FindObjectOfType<HttpRequest>();
-    }
-
-    public void GetComments(Guid stage)
-    {
-        StartCoroutine(_httpRequest.GetRequest<CommentDto[]>($"comment/{stage}", InitObject));
-    }
-
-    public int GetMaxNumberOfComments(int stageIndex)
-    {
-        return comments.Count(comment => comment.stageIndex == stageIndex);
-    }
-
-    private void InitObject(CommentDto[] comments)
-    {
-        wasUsed = false;
-        this.comments.AddRange(comments);
-        SetText();
-        EnableHistory();
-        FillButton();
-    }
-
-    private void EnableHistory()
-    {
-        var enabledHistorySize = MaxCommentSize > historyElements.Count ? historyElements.Count : MaxCommentSize;
-        foreach (var historyElement in historyElements)
+        void Awake()
         {
-            historyElement.SetActive(false);
+            _httpRequest = FindObjectOfType<HttpRequest>();
         }
 
-        for (var count = 0; count < enabledHistorySize; count++)
+        public void GetComments(Guid stage)
         {
-            historyElements[count].SetActive(true);
+            StartCoroutine(_httpRequest.GetRequest<CommentDto[]>($"comment/{stage}", InitObject));
         }
-    }
 
-    public void ShowCommentsInStageDialog(int stageIndex)
-    {
-        if (stageIndex == _stageIndex && wasUsed)
+        public int GetMaxNumberOfComments(int stageIndex)
         {
-            EnableHistory();
+            return _comments.Count(comment => comment.stageIndex == stageIndex);
+        }
+
+        private void InitObject(CommentDto[] comments)
+        {
+            _wasUsed = false;
+            this._comments.AddRange(comments);
             SetText();
-            return;
-        }
-
-        if (comments.Any(comment => comment.stageIndex == stageIndex))
-        {
-            _stageIndex = stageIndex;
-            wasUsed = true;
-
             EnableHistory();
-            SetText();
-        }
-        else
-        {
-            Debug.LogError($"Nenhum comentario nesse stage index cara. StageIndex: {stageIndex}");
-        }
-    }
-
-    public void ShowNext()
-    {
-        if (CurrentIndexComments.Count > _currentIndex + 1)
-        {
-            _currentIndex++;
-        }
-
-        SetText();
-    }
-
-    public void ShowPrevious()
-    {
-        if (_currentIndex > 0)
-        {
-            _currentIndex--;
-        }
-
-        SetText();
-    }
-
-    private void SetText()
-    {
-        if (CurrentIndexComments.Count > _currentIndex)
-        {
-            commentTextField.text = CurrentIndexComments[_currentIndex].comment;
             FillButton();
         }
-    }
 
-    private void FillButton()
-    {
-        foreach (var buttonFill in fillHistoryelements)
+        private void EnableHistory()
         {
-            buttonFill.Disable();
+            var enabledHistorySize = MaxCommentSize > historyElements.Count ? historyElements.Count : MaxCommentSize;
+            foreach (var historyElement in historyElements)
+            {
+                historyElement.SetActive(false);
+            }
+
+            for (var count = 0; count < enabledHistorySize; count++)
+            {
+                historyElements[count].SetActive(true);
+            }
         }
 
-        fillHistoryelements[_currentIndex].Enable();
-    }
-
-    public void ShowByIndex(int index)
-    {
-        if (comments.Count > index && index >= 0)
+        public void ShowCommentsInStageDialog(int stageIndex)
         {
-            _currentIndex = index;
+            if (stageIndex == _stageIndex && _wasUsed)
+            {
+                EnableHistory();
+                SetText();
+                return;
+            }
+
+            if (_comments.Any(comment => comment.stageIndex == stageIndex))
+            {
+                _stageIndex = stageIndex;
+                _wasUsed = true;
+
+                EnableHistory();
+                SetText();
+            }
+            else
+            {
+                Debug.LogError($"Nenhum comentario nesse stage index cara. StageIndex: {stageIndex}");
+            }
         }
 
-        SetText();
+        public void ShowNext()
+        {
+            if (CurrentIndexComments.Count > _currentIndex + 1)
+            {
+                _currentIndex++;
+            }
+
+            SetText();
+        }
+
+        public void ShowPrevious()
+        {
+            if (_currentIndex > 0)
+            {
+                _currentIndex--;
+            }
+
+            SetText();
+        }
+
+        private void SetText()
+        {
+            if (CurrentIndexComments.Count > _currentIndex)
+            {
+                commentTextField.text = CurrentIndexComments[_currentIndex].comment;
+                FillButton();
+            }
+        }
+
+        private void FillButton()
+        {
+            foreach (var buttonFill in fillHistoryElements)
+            {
+                buttonFill.Disable();
+            }
+
+            fillHistoryElements[_currentIndex].Enable();
+        }
+
+        public void ShowByIndex(int index)
+        {
+            if (_comments.Count > index && index >= 0)
+            {
+                _currentIndex = index;
+            }
+
+            SetText();
+        }
     }
-}
 
-[Serializable]
-public class CommentDto
-{
-    public string comment;
+    [Serializable]
+    public class CommentDto
+    {
+        public string comment;
 
-    public int stageIndex;
+        public int stageIndex;
+    }
 }
