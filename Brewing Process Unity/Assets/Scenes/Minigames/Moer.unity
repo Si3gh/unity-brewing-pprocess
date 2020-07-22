@@ -3048,6 +3048,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 943286936}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1041641455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041641457}
+  - component: {fileID: 1041641456}
+  m_Layer: 0
+  m_Name: PlayerPrefs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1041641456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041641455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a2c5845f3a40648bf26eb8a9410a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potencyIncreaseAmount: 5
+  potencyDecreaseAmount: 10
+  decreaseSpeed: 5
+  inititalPotency: 50
+  quantityToCollect: 20
+  timerValue: 50
+  secondsSpentInProcessor: 5
+--- !u!4 &1041641457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041641455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.9633455, y: 5.0243797, z: 3.7105224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1045703329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: ebc1a0489c41ed5449831253a3b92bb8,
@@ -3064,7 +3114,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1105209128}
   - component: {fileID: 1105209129}
-  - component: {fileID: 1105209130}
   m_Layer: 0
   m_Name: SeedColectoArea
   m_TagString: Untagged
@@ -3099,19 +3148,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33566624, y: 0.018665021, z: 0.60595816}
   m_Center: {x: 0, y: 0, z: -0.012053524}
---- !u!114 &1105209130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105209127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bfd4b6edb255e54981b4b8e523e9361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
 --- !u!1001 &1121903083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3697,8 +3733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b43d3a0c5eb8543bde75b90c7e9867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantityToCollect: 20
-  TimerValue: 50
 --- !u!114 &1348704463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,10 +3745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6231ffe475b4dbf4895f2f60fda6be5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potencyIncreaseAmount: 5
-  potencyDecreaseAmount: 0
-  decreaseSpeed: 0
-  inititalPotency: 50
   boxCollider: {fileID: 555028998}
 --- !u!114 &1348704464
 MonoBehaviour:
@@ -4154,7 +4184,6 @@ MonoBehaviour:
   - {fileID: 235156367}
   - {fileID: 1988183647}
   - {fileID: 1167424556}
-  secondsSpentInProcessor: 10
 --- !u!1 &1549572922
 GameObject:
   m_ObjectHideFlags: 0
