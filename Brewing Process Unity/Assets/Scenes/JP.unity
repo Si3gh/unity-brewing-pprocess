@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43865594, g: 0.48679048, b: 0.5670619, a: 1}
+  m_IndirectSpecularColor: {r: 0.4386552, g: 0.48678976, b: 0.5670608, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 42.2
+  m_fontSize: 36.85
   m_fontSizeBase: 41
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3837,6 +3837,7 @@ RectTransform:
   - {fileID: 825030368}
   - {fileID: 420432120}
   - {fileID: 929645412}
+  - {fileID: 809532809}
   m_Father: {fileID: 1576822992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3954,6 +3955,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795557996}
   m_CullTransparentMesh: 0
+--- !u!1 &809532808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809532809}
+  - component: {fileID: 809532810}
+  m_Layer: 5
+  m_Name: UpvoteIntegration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &809532809
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809532808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 726148267}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &809532810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809532808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae1575d282fd914c9830c4a91228e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &816924645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,7 +4915,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 929645414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809532810}
+        m_MethodName: Upvote
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &929645414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7437,7 +7497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.136, y: 0}
   m_AnchorMax: {x: 0.85200006, y: 0.439}
-  m_AnchoredPosition: {x: 0.00008583069, y: 0.3147893}
+  m_AnchoredPosition: {x: 0.00008583069, y: 0.31478882}
   m_SizeDelta: {x: 0.000026703, y: 0.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389026290
@@ -7570,7 +7630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57412f4f948dda40a81f7d803d34410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  APIUrl: https://escola-ti-time-02-develop.herokuapp.com/
+  apiUrl: https://escola-ti-time-02-develop.herokuapp.com/
 --- !u!1 &1398930908
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,12 +9072,7 @@ MonoBehaviour:
   - {fileID: 574936143}
   - {fileID: 508711790}
   - {fileID: 551331071}
-  fillHistoryelements:
-  - {fileID: 1537727478}
-  - {fileID: 1705436362}
-  - {fileID: 2142661782}
-  - {fileID: 1209876651}
-  - {fileID: 444388934}
+  fillHistoryElements: []
 --- !u!114 &1576822990
 MonoBehaviour:
   m_ObjectHideFlags: 0
