@@ -7630,7 +7630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57412f4f948dda40a81f7d803d34410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: 
+  apiUrl: https://escola-ti-time-02-develop.herokuapp.com/
 --- !u!1 &1398930908
 GameObject:
   m_ObjectHideFlags: 0
