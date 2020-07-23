@@ -114,6 +114,11 @@ namespace Request.Comment
             SetText();
         }
 
+        public CommentDto GetCurrentComment()
+        {
+            return CurrentIndexComments[_currentIndex];
+        }
+
         private void SetText()
         {
             if (CurrentIndexComments.Count > _currentIndex)
@@ -147,6 +152,8 @@ namespace Request.Comment
     [Serializable]
     public class CommentDto
     {
+        public string consultantId;
+        
         public string comment;
 
         public int stageIndex;
