@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GrainProcessor : MonoBehaviour
 {
@@ -32,6 +33,15 @@ public class GrainProcessor : MonoBehaviour
         if (_machineController.MachineOn)
         {
             _currentPotency -= Time.deltaTime * _decreaseSpeed;
+            ValidatePotency();
+        }
+    }
+
+    private void ValidatePotency()
+    {
+        if (_currentPotency <= 0)
+        {
+            _machineController.StopMachine();
         }
     }
 

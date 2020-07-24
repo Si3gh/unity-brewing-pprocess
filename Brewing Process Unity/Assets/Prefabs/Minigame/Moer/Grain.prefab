@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5394618662505108913
 Transform:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6339113323471851306}
   - component: {fileID: 6531951323449098575}
   m_Layer: 0
-  m_Name: Grain (1)
+  m_Name: Grain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4182314013959208981
 Transform:
   m_ObjectHideFlags: 0
@@ -373,6 +373,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 332710b21cacf254fa10e6ba0a3c3387, type: 3}
       propertyPath: m_Name
       value: grao
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 332710b21cacf254fa10e6ba0a3c3387, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 332710b21cacf254fa10e6ba0a3c3387, type: 3}
       propertyPath: m_LocalPosition.x
