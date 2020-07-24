@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MachinePotencyIntegration : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private TextMeshProUGUI textField;
     [SerializeField] private Image barFill;
 #pragma warning restore 0649
 
@@ -22,7 +21,6 @@ public class MachinePotencyIntegration : MonoBehaviour
     void Update()
     {
         barFill.fillAmount = MathfExtensions.Map(_grainProcessor.CurrentPotency, _machineController.MinPotency, _machineController.MaxPotency, 0, 1);
-        textField.text = String.Format("Potencia da máquina: {0:0.00}", _grainProcessor.CurrentPotency);
         barFill.color = returnColor();
     }
 

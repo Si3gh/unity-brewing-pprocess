@@ -17,6 +17,13 @@ public class TimerIntegration : MonoBehaviour
 
     void Update()
     {
-        textField.text = String.Format("Tempo Restante: {0:0.00}", _machineController.RemainingTime);
+        if (_machineController.RemainingTime > 0)
+        {
+            textField.text = String.Format("Bonus: {0:0.00}", _machineController.RemainingTime);
+        }
+        else
+        {
+            textField.text = String.Format("Bonus: 0");
+        }
     }
 }
