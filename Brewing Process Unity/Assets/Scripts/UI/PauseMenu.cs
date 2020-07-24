@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public Button pauseButton;
     public Button resumeMenuButton;
-    public Button resumeButton;
+    /*public Button resumeButton;*/
     public KeyCode pauseKey;
 
     public bool buttonPressed;
@@ -46,6 +46,7 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        buttonPressed = false;
     }
 
     public void ResumeGame()
@@ -53,9 +54,8 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-
     }
-    
+
     public void GoToMainMenu() 
     {
         Time.timeScale = 1f;
