@@ -6,25 +6,17 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public GameObject pauseMenu;
-
     public Button pauseButton;
     public Button resumeMenuButton;
-    public Button resumeButton;
     public KeyCode pauseKey;
-
     public bool buttonPressed;
-
     public static bool isPaused;
-    // Start is called before the first frame update
-  
 
- 
     void Start()
     {
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || buttonPressed )
@@ -46,6 +38,7 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        buttonPressed = false;
     }
 
     public void ResumeGame()
@@ -53,9 +46,8 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-
     }
-    
+
     public void GoToMainMenu() 
     {
         Time.timeScale = 1f;
@@ -68,16 +60,14 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         SceneManager.LoadScene("TrackScene");
     }
 
-
     public void QuitGame()
     {
         Application.Quit();
     }
     void OnEnable()
     {
-        pauseButton.onClick.AddListener(PauseGame);//adds a listener for when you click the button
+        pauseButton.onClick.AddListener(PauseGame);
     }
-
 
     public void OnPointerDown(PointerEventData eventData)
     {

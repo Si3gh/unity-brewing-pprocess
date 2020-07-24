@@ -11,6 +11,7 @@ public class GrainStock : MonoBehaviour
     private Stack<Grain> storedGrains;
 
     public int RemainingGrains => storedGrains.Count;
+    public int TotalGrains => grains.Length;
 
     public void Start()
     {
