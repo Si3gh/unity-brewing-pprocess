@@ -1,11 +1,15 @@
 ﻿using System;
 using UnityEngine;
-using Object = System.Object;
 
 namespace Request.Comment
 {
     public class UpvoteComment : MonoBehaviour
     {
+#pragma warning disable 0649
+        [SerializeField] private GameObject likedButton;
+        [SerializeField] private GameObject dislikedButton;
+#pragma warning restore 0649
+
         private HttpRequest _httpRequest;
         private CommentIntegration _commentIntegration;
 
@@ -14,7 +18,7 @@ namespace Request.Comment
         private Guid _consultantId;
         private long _dialogIndex;
 
-            void Awake()
+        void Awake()
         {
             _httpRequest = FindObjectOfType<HttpRequest>();
             _commentIntegration = FindObjectOfType<CommentIntegration>();
@@ -23,7 +27,39 @@ namespace Request.Comment
         public void Upvote()
         {
             var currentComment = _commentIntegration.GetCurrentComment();
-            StartCoroutine(_httpRequest.PostRequest($"comment/{_trackId}/{_stageId}/{currentComment.stageIndex}/{currentComment.consultantId}", null));
+            StartCoroutine(
+                _httpRequest.PostRequest(
+                    $"comment/{_trackId}/{_stageId}/{currentComment.stageIndex}/{currentComment.consultantId}",
+                    callback: () => ToggleUpvote(currentComment)
+                )
+            );
+        }
+
+        public void Downvote()
+        {
+            var currentComment = _commentIntegration.GetCurrentComment();
+            StartCoroutine(_httpRequest.DeleteRequest(
+                    $"comment/{_trackId}/{_stageId}/{currentComment.stageIndex}/{currentComment.consultantId}",
+                    callback: () => ToggleUpvote(currentComment)
+                ));
+        }
+
+        public void UpdateButtons()
+        {
+            var currentComment = _commentIntegration.GetCurrentComment();
+            DisableLikeButton(currentComment.upvotedByUser);
+        }
+
+        private void ToggleUpvote(Comment comment)
+        {
+            comment.upvotedByUser = !comment.upvotedByUser;
+            DisableLikeButton(comment.upvotedByUser);
+        }
+
+        private void DisableLikeButton(bool isUpvoted)
+        {
+            likedButton.SetActive(isUpvoted);
+            dislikedButton.SetActive(!isUpvoted);
         }
     }
 }
