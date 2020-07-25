@@ -1,15 +1,44 @@
 fileFormatVersion: 2
-guid: bd3a407d86d358a428cc92db3d933025
+guid: 17c44e308b2be3b4ea2023e11565b602
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere
-    4300002: Sphere.001
+    100000: Encaixe_lamina_direita
+    100002: Encaixe_lamina_esquerda
+    100004: Engrenagem Direita
+    100006: Engrenagem esquerda
+    100008: Moedor
+    100010: //RootNode
+    100012: Tampa_moedor
+    400000: Encaixe_lamina_direita
+    400002: Encaixe_lamina_esquerda
+    400004: Engrenagem Direita
+    400006: Engrenagem esquerda
+    400008: Moedor
+    400010: //RootNode
+    400012: Tampa_moedor
+    2100000: Material.002
+    2100002: Material
+    2100004: Material.001
+    2300000: Encaixe_lamina_direita
+    2300002: Encaixe_lamina_esquerda
+    2300004: Engrenagem Direita
+    2300006: Engrenagem esquerda
+    2300008: Moedor
+    2300010: Tampa_moedor
+    3300000: Encaixe_lamina_direita
+    3300002: Encaixe_lamina_esquerda
+    3300004: Engrenagem Direita
+    3300006: Engrenagem esquerda
+    3300008: Moedor
+    3300010: Tampa_moedor
+    4300000: Encaixe_lamina_direita
+    4300002: Encaixe_lamina_esquerda
+    4300004: Engrenagem Direita
+    4300006: Engrenagem esquerda
+    4300008: Moedor
+    4300010: Tampa_moedor
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
