@@ -44,14 +44,15 @@ namespace Request
             HandleRequest(callbackSuccess, request);
         }
 
-        public IEnumerator PostRequest(string sufixo, object body, Dictionary<string, string> requestHeaders = null)
+        public IEnumerator PostRequest(string sufixo, object body = null,
+            Dictionary<string, string> requestHeaders = null, Action callback = null)
         {
             UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
             request.method = UnityWebRequest.kHttpVerbPOST;
 
             yield return request.SendWebRequest();
 
-            HandleNoContentResponse(request);
+            HandleNoContentResponse(request, callback);
         }
 
         public IEnumerator PutRequest<T>(string sufixo, object body, Action<T> callbackSuccess,
@@ -76,6 +77,17 @@ namespace Request
             HandleRequest(callbackSuccess, request);
         }
 
+        public IEnumerator DeleteRequest(string sufixo, object body = null,
+            Dictionary<string, string> requestHeaders = null, Action callback = null)
+        {
+            UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
+            request.method = UnityWebRequest.kHttpVerbDELETE;
+
+            yield return request.SendWebRequest();
+
+            HandleNoContentResponse(request, callback);
+        }
+
         private void SetRequestHeaders(Dictionary<string, string> requestHeaders, UnityWebRequest request)
         {
             foreach (var requestHeader in requestHeaders)
@@ -94,7 +106,7 @@ namespace Request
             {
                 downloadHandler = new DownloadHandlerBuffer()
             };
-            
+
             if (body != null)
             {
                 request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson));
@@ -125,11 +137,15 @@ namespace Request
             }
         }
 
-        private void HandleNoContentResponse(UnityWebRequest request)
+        private void HandleNoContentResponse(UnityWebRequest request, Action callback)
         {
             if (request.isNetworkError || request.isHttpError)
             {
                 HandleError(request);
+            }
+            else
+            {
+                callback.Invoke();
             }
         }
 

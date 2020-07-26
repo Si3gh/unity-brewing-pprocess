@@ -8,25 +8,23 @@ namespace Request.Comment
 {
     public class CommentIntegration : MonoBehaviour
     {
-        [SerializeField] 
-        private TextMeshProUGUI commentTextField = null;
-
-        [SerializeField] 
-        private List<GameObject> historyElements = new List<GameObject>();
-
-        [SerializeField]
-        private List<ButtonSelect> fillHistoryElements = new List<ButtonSelect>();
+#pragma warning disable 0649
+        [SerializeField] private TextMeshProUGUI commentTextField;
+        [SerializeField] private List<GameObject> historyElements = new List<GameObject>();
+        [SerializeField] private List<ButtonSelect> fillHistoryElements = new List<ButtonSelect>();
+#pragma warning restore 0649
 
         private HttpRequest _httpRequest;
+        private UpvoteComment _upvoteCommentIntegration;
 
-        private readonly List<CommentDto> _comments = new List<CommentDto>();
+        private readonly List<Comment> _comments = new List<Comment>();
 
-        private List<CommentDto> CurrentIndexComments => _comments
+        private List<Comment> CurrentIndexComments => _comments
             .Where(comment => comment.stageIndex == _stageIndex)
             .ToList();
 
         private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
-    
+
         private int _currentIndex;
 
         private int _stageIndex;
@@ -35,12 +33,13 @@ namespace Request.Comment
 
         void Awake()
         {
+            _upvoteCommentIntegration = FindObjectOfType<UpvoteComment>();
             _httpRequest = FindObjectOfType<HttpRequest>();
         }
 
         public void GetComments(Guid stage)
         {
-            StartCoroutine(_httpRequest.GetRequest<CommentDto[]>($"comment/{stage}", InitObject));
+            StartCoroutine(_httpRequest.GetRequest<Comment[]>($"comment/{stage}", InitObject));
         }
 
         public int GetMaxNumberOfComments(int stageIndex)
@@ -48,11 +47,11 @@ namespace Request.Comment
             return _comments.Count(comment => comment.stageIndex == stageIndex);
         }
 
-        private void InitObject(CommentDto[] comments)
+        private void InitObject(Comment[] comments)
         {
             _wasUsed = false;
-            this._comments.AddRange(comments);
-            SetText();
+            _comments.AddRange(comments);
+            UpdateUi();
             EnableHistory();
             FillButton();
         }
@@ -76,7 +75,7 @@ namespace Request.Comment
             if (stageIndex == _stageIndex && _wasUsed)
             {
                 EnableHistory();
-                SetText();
+                UpdateUi();
                 return;
             }
 
@@ -86,7 +85,7 @@ namespace Request.Comment
                 _wasUsed = true;
 
                 EnableHistory();
-                SetText();
+                UpdateUi();
             }
             else
             {
@@ -99,9 +98,8 @@ namespace Request.Comment
             if (CurrentIndexComments.Count > _currentIndex + 1)
             {
                 _currentIndex++;
+                UpdateUi();
             }
-
-            SetText();
         }
 
         public void ShowPrevious()
@@ -109,22 +107,22 @@ namespace Request.Comment
             if (_currentIndex > 0)
             {
                 _currentIndex--;
+                UpdateUi();
             }
-
-            SetText();
         }
 
-        public CommentDto GetCurrentComment()
+        public Comment GetCurrentComment()
         {
             return CurrentIndexComments[_currentIndex];
         }
 
-        private void SetText()
+        private void UpdateUi()
         {
             if (CurrentIndexComments.Count > _currentIndex)
             {
                 commentTextField.text = CurrentIndexComments[_currentIndex].comment;
                 FillButton();
+                _upvoteCommentIntegration.UpdateButtons();
             }
         }
 
@@ -143,19 +141,22 @@ namespace Request.Comment
             if (_comments.Count > index && index >= 0)
             {
                 _currentIndex = index;
+                UpdateUi();
             }
-
-            SetText();
         }
     }
 
     [Serializable]
-    public class CommentDto
+    public class Comment
     {
         public string consultantId;
-        
+
         public string comment;
 
         public int stageIndex;
+
+        public long upvoteCount;
+
+        public bool upvotedByUser;
     }
 }
