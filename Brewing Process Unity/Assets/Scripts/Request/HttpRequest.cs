@@ -23,6 +23,8 @@ namespace Request
         {
             var request = UnityWebRequest.Get($"{apiUrl}/{sufixo}");
 
+            request.SetRequestHeader("Is-Unity", "true");
+            
             if (requestHeaders != null)
             {
                 SetRequestHeaders(requestHeaders, request);
@@ -107,6 +109,8 @@ namespace Request
                 downloadHandler = new DownloadHandlerBuffer()
             };
 
+            request.SetRequestHeader("Is-Unity", "true");
+            
             if (body != null)
             {
                 request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson));
