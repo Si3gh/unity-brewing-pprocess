@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using PlayerData;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -23,12 +24,7 @@ namespace Request
         {
             var request = UnityWebRequest.Get($"{apiUrl}/{sufixo}");
 
-            request.SetRequestHeader("Is-Unity", "true");
-            
-            if (requestHeaders != null)
-            {
-                SetRequestHeaders(requestHeaders, request);
-            }
+            SetRequestHeaders(requestHeaders, request);
 
             yield return request.SendWebRequest();
 
@@ -92,12 +88,16 @@ namespace Request
 
         private void SetRequestHeaders(Dictionary<string, string> requestHeaders, UnityWebRequest request)
         {
-            foreach (var requestHeader in requestHeaders)
+            if (requestHeaders != null)
             {
-                request.SetRequestHeader(requestHeader.Key, requestHeader.Value);
+                foreach (var requestHeader in requestHeaders)
+                {
+                    request.SetRequestHeader(requestHeader.Key, requestHeader.Value);
+                }
             }
 
             request.SetRequestHeader("content-type", "application/json");
+            request.SetRequestHeader("Guest-Id", PlayerPreferences.GetPlayerId().ToString());
         }
 
         private UnityWebRequest BuildWebRequest(string sufixo, object body, Dictionary<string, string> requestHeaders)
@@ -109,17 +109,12 @@ namespace Request
                 downloadHandler = new DownloadHandlerBuffer()
             };
 
-            request.SetRequestHeader("Is-Unity", "true");
-            
             if (body != null)
             {
                 request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(bodyAsJson));
             }
 
-            if (requestHeaders != null)
-            {
-                SetRequestHeaders(requestHeaders, request);
-            }
+            SetRequestHeaders(requestHeaders, request);
 
             return request;
         }
