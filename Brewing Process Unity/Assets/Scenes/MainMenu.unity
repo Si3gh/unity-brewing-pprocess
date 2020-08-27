@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 283238761}
   - component: {fileID: 283238760}
   - component: {fileID: 283238759}
-  - component: {fileID: 283238762}
+  - component: {fileID: 283238763}
   m_Layer: 5
   m_Name: Btn_StartApp
   m_TagString: Untagged
@@ -550,7 +550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.050013}
+  m_AnchoredPosition: {x: 0, y: -0.049963}
   m_SizeDelta: {x: 2160, y: 1080.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283238759
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 283238762}
+      - m_Target: {fileID: 283238763}
         m_MethodName: GoToTrackScene
         m_Mode: 1
         m_Arguments:
@@ -639,7 +639,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283238757}
   m_CullTransparentMesh: 0
---- !u!114 &283238762
+--- !u!114 &283238763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -648,14 +648,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 283238757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a8101aa744fc245a4e78f3ec4be0d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5127c40023ca43a0bf918bf7ed85bb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1939467496}
-  pauseButton: {fileID: 0}
-  resumeMenuButton: {fileID: 0}
-  pauseKey: 27
-  buttonPressed: 0
 --- !u!1 &588742020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -231.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642440570
