@@ -25,12 +25,16 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene("TrackScene");
     }
     
+    public void GoToDialogueScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Dialogue");
+    }
+    
     public void GoToFirstGame()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Moer");
     }
-    
-    
 }
     
