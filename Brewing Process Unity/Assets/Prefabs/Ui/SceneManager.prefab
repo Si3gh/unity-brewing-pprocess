@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5127c40023ca43a0bf918bf7ed85bb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWithTransition: 1
   transition: {fileID: 19867020458039590}
   progressSlider: {fileID: 3829587998407978401}
 --- !u!95 &19867020458039590
@@ -609,7 +610,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4168361375081939338
 MonoBehaviour:

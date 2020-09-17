@@ -7,9 +7,18 @@ public class SceneTransition : MonoBehaviour
 {
 
 #pragma warning disable 0649
+    [SerializeField] private bool startWithTransition;
     [SerializeField] private Animator transition;
     [SerializeField] private Slider progressSlider;
 #pragma warning restore 0649
+
+    public void Awake()
+    {
+        if (startWithTransition)
+        {
+            transition.SetTrigger("FadeIn");
+        }
+    }
 
     public void GoToMainMenu()
     {
@@ -20,7 +29,7 @@ public class SceneTransition : MonoBehaviour
     {
         LoadSceneWithLoading("TrackScene");
     }
-    
+
     public void GoToDialogueScene()
     {
         LoadSceneWithLoading("Dialogue");
@@ -39,7 +48,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadSceneAsync(string sceneName)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("FadeOut");
 
         yield return new WaitForSeconds(1f);
 
