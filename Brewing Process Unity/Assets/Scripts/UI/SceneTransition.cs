@@ -24,7 +24,12 @@ public class SceneTransition : MonoBehaviour
     {
         LoadSceneWithLoading("MainMenu");
     }
-
+    
+    public void GoToHub()
+    {
+        LoadSceneWithLoading("Hub");
+    }
+    
     public void GoToTrackScene()
     {
         LoadSceneWithLoading("TrackScene");
