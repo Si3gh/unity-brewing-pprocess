@@ -40,6 +40,15 @@ public class SceneTransition : MonoBehaviour
         LoadSceneWithLoading("Dialogue");
     }
     
+    public void GoToDialogueTutorial()
+    {
+        LoadSceneWithLoading("DialogueTutorial");
+    }
+    
+    public void GoToMoer_tutorial()
+    {
+        LoadSceneWithLoading("Moer_tutorial");
+    }
     public void GoToFirstGame()
     {
         LoadSceneWithLoading("Moer");

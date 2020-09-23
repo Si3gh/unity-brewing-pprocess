@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Moer.unity
     guid: ae1ed31bfaa9f38409e478e641ff391d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Moer_tutorial.unity
+    guid: 2139ccf6116f2e04c90dd67da229b07f
+  - enabled: 1
+    path: Assets/Scenes/DialogueTutorial.unity
+    guid: a6aeb8586f0b949458a52786172f9791
   m_configObjects: {}
