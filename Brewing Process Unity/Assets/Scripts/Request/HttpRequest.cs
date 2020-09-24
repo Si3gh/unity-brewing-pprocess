@@ -64,6 +64,17 @@ namespace Request
             HandleRequest(callbackSuccess, request);
         }
 
+        public IEnumerator PutRequest(string sufixo, object body = null,
+            Dictionary<string, string> requestHeaders = null, Action callback = null)
+        {
+            UnityWebRequest request = BuildWebRequest(sufixo, body, requestHeaders);
+            request.method = UnityWebRequest.kHttpVerbPUT;
+
+            yield return request.SendWebRequest();
+
+            HandleNoContentResponse(request, callback);
+        }
+
         public IEnumerator DeleteRequest<T>(string sufixo, object body, Action<T> callbackSuccess,
             Dictionary<string, string> requestHeaders = null)
         {
