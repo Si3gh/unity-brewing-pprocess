@@ -5136,6 +5136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4168361373527264989, guid: f78604686d9341844a850bad3540f0c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4168361373527264991, guid: f78604686d9341844a850bad3540f0c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5189,6 +5194,16 @@ PrefabInstance:
     - target: {fileID: 4168361373527264991, guid: f78604686d9341844a850bad3540f0c1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168361375081939340, guid: f78604686d9341844a850bad3540f0c1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548100759822251555, guid: f78604686d9341844a850bad3540f0c1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6827,10 +6842,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2526715248124633285, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+    - target: {fileID: 2526715248364664221, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.6085205
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715248364664221, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2526715248372439867, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
@@ -6878,6 +6898,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2526715249133375319, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249199611577, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249199611577, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249366420274, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249366420274, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249462550382, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715249462550382, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -6916,6 +6966,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tutorial_Moer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321366307997, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321366307997, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321589679377, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321589679377, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4837364568022458616, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
