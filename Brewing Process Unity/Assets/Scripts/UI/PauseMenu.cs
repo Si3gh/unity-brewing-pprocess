@@ -45,7 +45,7 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        buttonPressed = true;
+        buttonPressed = false;
     }
 
     public void GoToMainMenu() 
