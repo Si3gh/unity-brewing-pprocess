@@ -38,7 +38,7 @@ namespace Request.Comment
         public void Downvote()
         {
             var currentComment = _commentIntegration.GetCurrentComment();
-            StartCoroutine(_httpRequest.DeleteRequest(
+            StartCoroutine(_httpRequest.PutRequest(
                     $"comment/{_trackId}/{_stageId}/{currentComment.stageIndex}/{currentComment.consultantId}",
                     callback: () => ToggleUpvote(currentComment)
                 ));
