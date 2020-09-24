@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37699503, y: 0.22259265}
   m_AnchorMax: {x: 0.6552948, y: 0.3707162}
-  m_AnchoredPosition: {x: -0.6158447, y: 0.6084595}
+  m_AnchoredPosition: {x: -0.6158447, y: 0.6085205}
   m_SizeDelta: {x: -330, y: -13.655884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2526715248124633287
@@ -654,13 +654,13 @@ MonoBehaviour:
   m_margin: {x: 0.16125488, y: 1.518753, z: 1.3457031, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 2526715248280944137}
-    characterCount: 0
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -852,14 +852,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 2526715248327578241}
-    characterCount: 0
+    characterCount: 87
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 3
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Quando gr\xE3os caem na maquina faz com que a pot\xEAncia dela diminua
+  m_text: "Quando gr\xE3os caem na m\xE1quina faz com que a pot\xEAncia dela diminua
     e pressionando o bot\xE3o indicado faz com que essa pot\xEAncia aumente"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 53.6
+  m_fontSize: 53.7
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2526715248364664291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715248372439866}
   m_TextComponent: {fileID: 2526715249798115564}
   m_materialReferenceIndex: 1
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715248449200629}
   m_TextComponent: {fileID: 2526715249653884204}
   m_materialReferenceIndex: 1
@@ -1564,21 +1564,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715248516582179}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715249133375319}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1721,21 +1721,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715248549070244}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715248387234282}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715248757229869}
   m_TextComponent: {fileID: 2526715248822135996}
   m_materialReferenceIndex: 1
@@ -1989,9 +1989,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A fase \xE9 concluida quando todos os gr\xE3os forem processados, nisso
-    ser\xE1 apresentado a qualidade dos seus gr\xE3os moidos. Um gr\xE3o muito ou
-    pouco moido pode interferir na qualidade de sua cerveja."
+  m_text: "A fase \xE9 conclu\xEDda quando todos os gr\xE3os forem processados, nisso
+    ser\xE1 apresentado a qualidade dos seus gr\xE3os mo\xEDdos. Um gr\xE3o muito
+    ou pouco mo\xEDdo pode interferir na qualidade de sua cerveja."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
   m_sharedMaterial: {fileID: 21052247315630278, guid: 0c66a48638bb7c741b28547788f0c9d8,
@@ -2061,14 +2061,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: -2.2573547}
   m_textInfo:
     textComponent: {fileID: 2526715248822135996}
-    characterCount: 0
+    characterCount: 191
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 31
+    wordCount: 32
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 6
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -2330,7 +2330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pot\xEAncia da M\xE1quina\n"
+  m_text: "Pot\xEAncia da M\xE1quina"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4eea8d11dae60441b1bd3b1a281901d, type: 2}
   m_sharedMaterial: {fileID: 21957107683393806, guid: c4eea8d11dae60441b1bd3b1a281901d,
@@ -2400,10 +2400,10 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715249008915721}
-    characterCount: 20
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715248942193082}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715249133375318}
   m_TextComponent: {fileID: 2526715248516582179}
   m_materialReferenceIndex: 1
@@ -2530,8 +2530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10.463013}
-  m_SizeDelta: {x: 0, y: 0.00024414}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.00012207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2526715249177949989
 GameObject:
@@ -2548,7 +2548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2526715249177949988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2526715249199611583}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2850,14 +2850,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 2526715249254691842}
-    characterCount: 0
+    characterCount: 113
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 17
+    wordCount: 17
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 3
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -3151,21 +3151,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715249500046597}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715248908515050}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3378,13 +3378,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2526715249632543805}
-    characterCount: 0
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3465,7 +3465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pot\xEAncia da M\xE1quina\n"
+  m_text: "Pot\xEAncia da M\xE1quina"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4eea8d11dae60441b1bd3b1a281901d, type: 2}
   m_sharedMaterial: {fileID: 21957107683393806, guid: c4eea8d11dae60441b1bd3b1a281901d,
@@ -3535,21 +3535,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715249653884204}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715248449200634}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3736,7 +3736,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715249770590696}
   m_TextComponent: {fileID: 2526715249254691842}
   m_materialReferenceIndex: 1
@@ -3805,7 +3805,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "A Pot\xEAncia interfere interfere diretamente nos gr\xE3os processados,
-    se a potencia for muito alta ou muito baixa os gr\xE3os ficam mal processados
+    se a pot\xEAncia for muito alta ou muito baixa os gr\xE3os ficam mal processados
     e afetam a cerveja."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
@@ -3876,14 +3876,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 2526715249798115564}
-    characterCount: 0
+    characterCount: 160
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 25
+    wordCount: 26
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 4
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -3963,7 +3963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gr\xE3os Processados\n"
+  m_text: "Gr\xE3os Processados"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4eea8d11dae60441b1bd3b1a281901d, type: 2}
   m_sharedMaterial: {fileID: 21957107683393806, guid: c4eea8d11dae60441b1bd3b1a281901d,
@@ -4033,21 +4033,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715249818891486}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 2526715249462550382}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4120,7 +4120,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Adicionando Gr\xE3os\r"
+  m_text: "Adicionando Gr\xE3os"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4eea8d11dae60441b1bd3b1a281901d, type: 2}
   m_sharedMaterial: {fileID: 21957107683393806, guid: c4eea8d11dae60441b1bd3b1a281901d,
@@ -4190,14 +4190,14 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 2526715249832856808}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -4277,8 +4277,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pressionar este bot\xE3o faz com que novos gr\xE3os entrem na maquina para
-    serem mo\xEDdos"
+  m_text: "Pressionar este bot\xE3o faz com que novos gr\xE3os entrem na m\xE1quina
+    para serem mo\xEDdos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
   m_sharedMaterial: {fileID: 21052247315630278, guid: 0c66a48638bb7c741b28547788f0c9d8,
@@ -4348,14 +4348,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 2526715249852484688}
-    characterCount: 0
+    characterCount: 81
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 3
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -4435,8 +4435,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Caso a potencia da m\xE1quina caia por completo, a m\xE1quina ser\xE1 desligada
-    e com isso a fase \xE9 encerrada sem sucesso"
+  m_text: "Caso a pot\xEAncia da m\xE1quina caia por completo, a m\xE1quina ser\xE1
+    desligada e com isso a fase \xE9 encerrada sem sucesso"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
   m_sharedMaterial: {fileID: 21052247315630278, guid: 0c66a48638bb7c741b28547788f0c9d8,
@@ -4506,14 +4506,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: -0.48468018}
   m_textInfo:
     textComponent: {fileID: 2526715249862390347}
-    characterCount: 0
+    characterCount: 112
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 20
+    wordCount: 21
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 4
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -4669,7 +4669,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 2526715249964745885}
   m_TextComponent: {fileID: 2526715249862390347}
   m_materialReferenceIndex: 1
@@ -5986,14 +5986,14 @@ MonoBehaviour:
   m_margin: {x: 135.37384, y: 1.512223, z: 119.137886, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 4469576321656880492}
-    characterCount: 0
+    characterCount: 99
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 15
+    wordCount: 16
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 3
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -6145,7 +6145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gr\xE3os Disponiveis\n"
+  m_text: "Gr\xE3os Disponiveis"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4eea8d11dae60441b1bd3b1a281901d, type: 2}
   m_sharedMaterial: {fileID: 21957107683393806, guid: c4eea8d11dae60441b1bd3b1a281901d,
@@ -6215,21 +6215,21 @@ MonoBehaviour:
   m_margin: {x: 126.2793, y: 2.5994818, z: 87.761696, w: 2.6489708}
   m_textInfo:
     textComponent: {fileID: 4469576321961893659}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
+    lineCount: 1
+    pageCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 4469576321589679377}
+  - {fileID: 2526715249199611577}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6553,13 +6553,13 @@ MonoBehaviour:
   m_margin: {x: 0.16125488, y: 1.518753, z: 1.3457031, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 1328829049443827294}
-    characterCount: 0
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -7570,13 +7570,13 @@ MonoBehaviour:
   m_margin: {x: 0.16125488, y: 1.518753, z: 1.3457031, w: 0.49946952}
   m_textInfo:
     textComponent: {fileID: 6212215361276456991}
-    characterCount: 0
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
