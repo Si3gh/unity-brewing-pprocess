@@ -5104,12 +5104,18 @@ PrefabInstance:
     - target: {fileID: 1274630710337073105, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2526715248124633285, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.6085205
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526715248327578241, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_text
+      value: "Isso faz com que a quantidade de gr\xE3os processados, representada
+        por esta barra, aumente"
       objectReference: {fileID: 0}
     - target: {fileID: 2526715248364664221, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
@@ -5259,7 +5265,7 @@ PrefabInstance:
     - target: {fileID: 2526715249177949989, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2526715249199611577, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
@@ -5401,6 +5407,11 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4469576321366307997, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4469576321589679377, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_Material
@@ -5410,6 +5421,37 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321589679377, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321656880492, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_text
+      value: "Isso faz com que a quantidade de gr\xE3os dispon\xEDveis para processar,
+        representada por esta barra, caia"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321656880492, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 49.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321656880492, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321656880492, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469576321656880492, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4469576321961893659, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
@@ -5474,6 +5516,11 @@ PrefabInstance:
     - target: {fileID: 4837364568022458616, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253637589936836271, guid: b23dcfb8f6a0dbe42b1f3e9695f36c14,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
