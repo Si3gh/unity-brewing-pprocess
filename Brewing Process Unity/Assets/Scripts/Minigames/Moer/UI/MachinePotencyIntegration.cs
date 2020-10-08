@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Minigames.Moer.UI;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,13 +28,13 @@ public class MachinePotencyIntegration : MonoBehaviour
     private Color32 returnColor(){
         if (_grainProcessor.CurrentPotency < 35) 
         {
-            return new Color32(75, 157, 179, 255); //BLUE
+            return Color32Factory.BluePotencyColor();
         }
         if (_grainProcessor.CurrentPotency < 75)
         {
-           return new Color32(67, 233, 55, 255); //GREEN
+            return Color32Factory.GreenPotencyColor();
         }
-        return  new Color32(233, 79, 55, 255); //GREEN
+        return Color32Factory.RedPotencyColor();
 
     }
 }

@@ -48,7 +48,7 @@ public class MachineController : MonoBehaviour
     public void StopMachine()
     {
         MachineOn = false;
-        _scoreIntegration.ShowScore();
+        _scoreIntegration.ShowScore(remainingTime);
     }
 
     public bool isBroken()
