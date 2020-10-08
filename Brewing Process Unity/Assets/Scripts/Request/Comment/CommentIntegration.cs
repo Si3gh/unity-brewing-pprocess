@@ -83,6 +83,7 @@ namespace Request.Comment
             {
                 _stageIndex = stageIndex;
                 _wasUsed = true;
+                _currentIndex = 0;
 
                 EnableHistory();
                 UpdateUi();
