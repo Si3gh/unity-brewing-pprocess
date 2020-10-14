@@ -370,10 +370,10 @@ RectTransform:
   m_Father: {fileID: 1699168288}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
-  m_AnchorMin: {x: 0.07443023, y: 0.24074206}
-  m_AnchorMax: {x: 0.63558203, y: 0.97200006}
-  m_AnchoredPosition: {x: 1.6000061, y: 7.4600067}
-  m_SizeDelta: {x: 413.07, y: -430.45}
+  m_AnchorMin: {x: 0.091000006, y: 0.25324938}
+  m_AnchorMax: {x: 0.68529737, y: 0.96325195}
+  m_AnchoredPosition: {x: -0.10998535, y: 0.020004272}
+  m_SizeDelta: {x: 422.54, y: -426.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &49012355
 GameObject:
@@ -619,7 +619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02029626, y: 0.06975578}
   m_AnchorMax: {x: 0.26700002, y: 0.9092282}
-  m_AnchoredPosition: {x: -0.099990845, y: 0.47519875}
+  m_AnchoredPosition: {x: -0.1000061, y: 0.47519875}
   m_SizeDelta: {x: 16.29, y: 11.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156132753
@@ -1692,7 +1692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.048, y: 0.09200001}
   m_AnchorMax: {x: 0.952, y: 0.432}
-  m_AnchoredPosition: {x: -0.069999695, y: 0.45999908}
+  m_AnchoredPosition: {x: -0.070007324, y: 0.45999908}
   m_SizeDelta: {x: -0.27000046, y: -0.059999943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &428612906
@@ -2844,7 +2844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.99588984, y: 1}
-  m_AnchoredPosition: {x: -1.726593, y: -0.65997314}
+  m_AnchoredPosition: {x: -1.7265625, y: -0.65997314}
   m_SizeDelta: {x: 7.456665, y: 0.7201233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &742634466
@@ -3261,7 +3261,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Texto 2
+  m_text: "No processo de moagem \xE9 necess\xE1rio abrir o gr\xE3o de MALTE para
+    expor o AMIDO e otimizar a rea\xE7\xE3o das enzimas sobre o AMIDO."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3289,7 +3290,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.45
+  m_fontSize: 31.15
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3330,12 +3331,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.16342163}
   m_textInfo:
     textComponent: {fileID: 823727327}
-    characterCount: 228
+    characterCount: 135
     spriteCount: 0
-    spaceCount: 41
-    wordCount: 37
+    spaceCount: 26
+    wordCount: 27
     linkCount: 0
-    lineCount: 15
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4286,7 +4287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.025580138, y: 0.58935255}
   m_AnchorMax: {x: 0.9807396, y: 1}
-  m_AnchoredPosition: {x: 0.34999847, y: 0.10480881}
+  m_AnchoredPosition: {x: 0.3499756, y: 0.10480881}
   m_SizeDelta: {x: -0.07999992, y: -0.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952850232
@@ -4449,7 +4450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.9026487}
-  m_AnchoredPosition: {x: -0.40000153, y: 1.1800003}
+  m_AnchoredPosition: {x: -0.3999939, y: 1.1800003}
   m_SizeDelta: {x: -0.26, y: -1.4299998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086251965
@@ -5040,7 +5041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47512537, y: 0.43743125}
   m_AnchorMax: {x: 0.5366095, y: 1}
-  m_AnchoredPosition: {x: -0.089999914, y: -0.559}
+  m_AnchoredPosition: {x: -0.09000015, y: -0.559}
   m_SizeDelta: {x: 0.3, y: -1.787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201061072
@@ -5531,7 +5532,7 @@ PrefabInstance:
     - target: {fileID: 4181475907971512093, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6430362256754611811, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -5688,6 +5689,38 @@ PrefabInstance:
       propertyPath: m_fontSizeMin
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_text
+      value: "Pressionando bot\xE3o de COMENT\xC1RIOS, voc\xEA ganha acesso ao hist\xF3rico
+        de COMENT\xC1RIOS feito pelo CONSULTOR sobre determinada instru\xE7\xE3o (bloco
+        de di\xE1logo/ensinamento) do mestre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 171
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504604038043, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8364593504612016895, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_Enabled
@@ -5701,8 +5734,8 @@ PrefabInstance:
     - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_text
-      value: "Ao final da li\xE7\xE3o do mestre \xE9 poss\xEDvel testar suas habilidades
-        no jogo."
+      value: "Ao final da li\xE7\xE3o do mestre voc\xEA ganha acesso ao jogo. O jogo
+        ser\xE1 diferente em cada etapa do PROCESSO CERVEJEIRO."
       objectReference: {fileID: 0}
     - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -5713,6 +5746,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeMin
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593504745022026, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8364593504784142092, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -5842,7 +5900,7 @@ PrefabInstance:
     - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_fontSize
-      value: 58.05
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -5852,12 +5910,40 @@ PrefabInstance:
     - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_fontSizeMin
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_text
+      value: "O CONSULTOR \xE9 um membro da nossa plataforma que \xE9 qualificado
+        a dar conselhos aos nossos usu\xE1rios. Em algumas das instru\xE7\xF5es do
+        MESTRE CERVEJEIRO, o CONSULTOR insere coment\xE1rios revelantes  \xE0s fases
+        do PROCESSO CERVEJEIRO."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 222
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364593505234899098, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 8364593505283516583, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -6157,27 +6243,28 @@ PrefabInstance:
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_text
-      value: "Voc\xEA pode utilizar o bot\xE3o de like no coment\xE1rio para impulsion\xE1-lo."
+      value: "Voc\xEA pode utilizar o bot\xE3o de like impulsionar algum COMENT\xC1RIO
+        feito por algum CONSULTOR."
       objectReference: {fileID: 0}
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 68
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8364593506263501019, guid: a4daebc26b4de5f45b2ec0dcd16303fb,
         type: 3}
@@ -6273,7 +6360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1308614237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6291,7 +6378,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.0000076293945}
-  m_SizeDelta: {x: 0, y: -0.000015259}
+  m_SizeDelta: {x: 0, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308614238
 MonoBehaviour:
@@ -6311,8 +6398,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Iniciaremos com uma breve apresenta\xE7\xE3o sobre o processo de MOAGEM,
-    com instru\xE7\xF5es minhas e,  caso existente, COMENT\xC1RIOS feitos por CONSULTORES."
+  m_text: "Bem vindo ! Eu sou o Mestre Cervejeiro e, serei o seu guia nessa jornada.\r\nCome\xE7aremos
+    falando sobre o processo de MOAGEM."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6381,10 +6468,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.16342163}
   m_textInfo:
     textComponent: {fileID: 1308614238}
-    characterCount: 144
+    characterCount: 122
     spriteCount: 0
-    spaceCount: 20
-    wordCount: 20
+    spaceCount: 21
+    wordCount: 21
     linkCount: 0
     lineCount: 4
     pageCount: 1
@@ -7164,7 +7251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.07570271, y: 0.26574814}
   m_AnchorMax: {x: 0.6745947, y: 0.9681393}
-  m_AnchoredPosition: {x: 0.019989014, y: -0.43000793}
+  m_AnchoredPosition: {x: 0.019958496, y: -0.43000793}
   m_SizeDelta: {x: 417.53, y: -417.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1450569477
@@ -7342,7 +7429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Agora vai la meu fio, joga
+  m_text: Agora vai la meu fio, joga !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8425,7 +8512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.99588984, y: 1}
-  m_AnchoredPosition: {x: -1.726593, y: -0.65997314}
+  m_AnchoredPosition: {x: -1.7265625, y: -0.65997314}
   m_SizeDelta: {x: 7.456665, y: 0.7201233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1717550068
@@ -8639,7 +8726,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text 4
+  m_text: "A moagem do malte N\xC3O deve ser muito fina a ponto de tornar lenta a
+    FILTRAGEM do MOSTO ou, ao contr\xE1rio, muito grossa, o que dificultaria a hidr\xF3lise
+    do amido."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8667,7 +8756,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.45
+  m_fontSize: 29.95
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8708,12 +8797,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.16342163}
   m_textInfo:
     textComponent: {fileID: 1783592107}
-    characterCount: 228
+    characterCount: 159
     spriteCount: 0
-    spaceCount: 41
-    wordCount: 37
+    spaceCount: 29
+    wordCount: 30
     linkCount: 0
-    lineCount: 15
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -8861,7 +8950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4751254, y: 0.33742508}
   m_AnchorMax: {x: 0.5366095, y: 1}
-  m_AnchoredPosition: {x: 0.10688, y: -0.13}
+  m_AnchoredPosition: {x: 0.10688019, y: -0.13000011}
   m_SizeDelta: {x: 0.28376, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807042958
@@ -8935,7 +9024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.025580138, y: 0}
   m_AnchorMax: {x: 0.9807405, y: 0.37600002}
-  m_AnchoredPosition: {x: 0.12999725, y: 0.1340332}
+  m_AnchoredPosition: {x: 0.13000488, y: 0.1340332}
   m_SizeDelta: {x: -0.28999996, y: 0.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814317727
@@ -9369,7 +9458,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text 5
+  m_text: "Lembrando Hidr\xF3lise \xE9 o processo em que ocorre a quebra de mol\xE9culas
+    por meio da presen\xE7a da \xE1gua. J\xE1 o  mosto \xE9 o resultado da mistura
+    do malte e \xE1gua sob a a\xE7\xE3o do calor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9397,7 +9488,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.45
+  m_fontSize: 33.35
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9438,12 +9529,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.16342163}
   m_textInfo:
     textComponent: {fileID: 1901240512}
-    characterCount: 228
+    characterCount: 97
     spriteCount: 0
-    spaceCount: 41
-    wordCount: 37
+    spaceCount: 17
+    wordCount: 18
     linkCount: 0
-    lineCount: 15
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -9524,7 +9615,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text 3
+  m_text: "O amido \xE9 o a\xE7\xFAcar que est\xE1 presente no malte. Os gr\xE3os
+    de malte s\xE3o saquinhos de amido e as mol\xE9culas que formam o amido s\xE3o
+    glicoses."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9552,7 +9645,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.45
+  m_fontSize: 31.15
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9593,12 +9686,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.16342163}
   m_textInfo:
     textComponent: {fileID: 1922874051}
-    characterCount: 228
+    characterCount: 135
     spriteCount: 0
-    spaceCount: 41
-    wordCount: 37
+    spaceCount: 26
+    wordCount: 27
     linkCount: 0
-    lineCount: 15
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -9639,7 +9732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1940016913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10012,7 +10105,7 @@ PrefabInstance:
     - target: {fileID: 512145319197544320, guid: 17c4f3853b17d884d82b8327ba24d7d8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: 0.9999695
       objectReference: {fileID: 0}
     - target: {fileID: 512145319508599811, guid: 17c4f3853b17d884d82b8327ba24d7d8,
         type: 3}
