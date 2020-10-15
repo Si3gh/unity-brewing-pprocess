@@ -1,16 +1,23 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public GameObject pauseMenu;
-    public Button pauseButton;
-    public Button resumeMenuButton;
-    public KeyCode pauseKey;
-    public bool buttonPressed;
-    public bool isPaused;
+#pragma warning disable 0649
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private Button pauseButton;
+    [SerializeField] private bool buttonPressed;
+    [SerializeField] private bool isPaused;
+
+    [Header("Countdown")]
+    [SerializeField] private bool hasCounter;
+    [SerializeField] private TextMeshProUGUI countdownText;
+    [SerializeField] private GameObject countdownScreen;
+#pragma warning restore 0649
 
     void Start()
     {
@@ -43,9 +50,30 @@ public class PauseMenu : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
         isPaused = false;
         buttonPressed = false;
+        
+        if (hasCounter)
+        {
+            StartCoroutine(StartCounter());
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    private IEnumerator StartCounter()
+    {
+        countdownScreen.SetActive(true);
+        countdownText.text = "3";
+        yield return new WaitForSecondsRealtime(1f);
+        countdownText.text = "2";
+        yield return new WaitForSecondsRealtime(1f);
+        countdownText.text = "1";
+        yield return new WaitForSecondsRealtime(1f);
+        Time.timeScale = 1f;
+        countdownScreen.SetActive(false);
     }
 
     public void GoToMainMenu() 

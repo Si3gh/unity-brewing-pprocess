@@ -1,5 +1,4 @@
 ﻿using Assets.Scripts.Minigames.Moer.UI;
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
