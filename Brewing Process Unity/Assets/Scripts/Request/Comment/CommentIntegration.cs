@@ -10,26 +10,22 @@ namespace Request.Comment
     {
 #pragma warning disable 0649
         [SerializeField] private TextMeshProUGUI commentTextField;
+        [SerializeField] private TextMeshProUGUI consultantNameTextField;
+        [SerializeField] private TextMeshProUGUI consultantUsernameTextField;
         [SerializeField] private List<GameObject> historyElements = new List<GameObject>();
         [SerializeField] private List<ButtonSelect> fillHistoryElements = new List<ButtonSelect>();
 #pragma warning restore 0649
 
         private HttpRequest _httpRequest;
         private UpvoteComment _upvoteCommentIntegration;
-
         private readonly List<Comment> _comments = new List<Comment>();
-
+        private int _currentIndex;
+        private int _stageIndex;
+        private bool _wasUsed;
+        private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
         private List<Comment> CurrentIndexComments => _comments
             .Where(comment => comment.stageIndex == _stageIndex)
             .ToList();
-
-        private int MaxCommentSize => GetMaxNumberOfComments(_stageIndex);
-
-        private int _currentIndex;
-
-        private int _stageIndex;
-
-        private bool _wasUsed;
 
         void Awake()
         {
@@ -51,7 +47,7 @@ namespace Request.Comment
         {
             _wasUsed = false;
             _comments.AddRange(comments);
-            UpdateUi();
+            ShowCommentInUi();
             EnableHistory();
             FillButton();
         }
@@ -75,7 +71,7 @@ namespace Request.Comment
             if (stageIndex == _stageIndex && _wasUsed)
             {
                 EnableHistory();
-                UpdateUi();
+                ShowCommentInUi();
                 return;
             }
 
@@ -86,7 +82,7 @@ namespace Request.Comment
                 _currentIndex = 0;
 
                 EnableHistory();
-                UpdateUi();
+                ShowCommentInUi();
             }
             else
             {
@@ -99,7 +95,7 @@ namespace Request.Comment
             if (CurrentIndexComments.Count > _currentIndex + 1)
             {
                 _currentIndex++;
-                UpdateUi();
+                ShowCommentInUi();
             }
         }
 
@@ -108,7 +104,7 @@ namespace Request.Comment
             if (_currentIndex > 0)
             {
                 _currentIndex--;
-                UpdateUi();
+                ShowCommentInUi();
             }
         }
 
@@ -117,11 +113,16 @@ namespace Request.Comment
             return CurrentIndexComments[_currentIndex];
         }
 
-        private void UpdateUi()
+        private void ShowCommentInUi()
         {
             if (CurrentIndexComments.Count > _currentIndex)
             {
-                commentTextField.text = CurrentIndexComments[_currentIndex].comment;
+                var currentComment = CurrentIndexComments[_currentIndex];
+                
+                commentTextField.text = currentComment.comment;
+                consultantNameTextField.text = currentComment.consultantName;
+                consultantUsernameTextField.text = $"({currentComment.consultantUserName})";
+
                 FillButton();
                 _upvoteCommentIntegration.UpdateButtons();
             }
@@ -142,7 +143,7 @@ namespace Request.Comment
             if (_comments.Count > index && index >= 0)
             {
                 _currentIndex = index;
-                UpdateUi();
+                ShowCommentInUi();
             }
         }
     }
@@ -151,13 +152,11 @@ namespace Request.Comment
     public class Comment
     {
         public string consultantId;
-
+        public string consultantName;
+        public string consultantUserName;
         public string comment;
-
         public int stageIndex;
-
         public long upvoteCount;
-
         public bool upvotedByUser;
     }
 }
