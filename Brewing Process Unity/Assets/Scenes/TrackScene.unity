@@ -3816,7 +3816,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1024022225}
-        m_MethodName: GoToFirstGame
+        m_MethodName: GoToDialogueScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

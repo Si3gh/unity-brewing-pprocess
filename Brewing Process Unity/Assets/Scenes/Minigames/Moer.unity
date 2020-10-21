@@ -213,6 +213,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7447448149231830507}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &20389282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1075,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14.05
+  m_fontSize: 16.25
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9312,7 +9323,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 13.65
+  m_fontSize: 15.8
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10595,6 +10606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseComponent
       objectReference: {fileID: 0}
+    - target: {fileID: 7447448150131186884, guid: 17c4f3853b17d884d82b8327ba24d7d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7447448150131186885, guid: 17c4f3853b17d884d82b8327ba24d7d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10677,3 +10693,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c4f3853b17d884d82b8327ba24d7d8, type: 3}
+--- !u!1 &7447448149231830507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7447448150131186884, guid: 17c4f3853b17d884d82b8327ba24d7d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7447448149231830506}
+  m_PrefabAsset: {fileID: 0}
