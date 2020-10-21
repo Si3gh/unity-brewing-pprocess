@@ -169,7 +169,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Ap\xF3s o processo de MALTAGEM, que consiste na germina\xE7\xE3o artificial
-    da cevada, ser\xE1 feito a MOAGEM dos gr\xE3os de malte. Estes ser\xE3o triturados
+    da cevada, ser\xE1 feito a MOAGEM dos gr\xE3os de malte. \nEstes ser\xE3o triturados
     para facilitar o servi\xE7o das enzimas, na convers\xE3o do amido em a\xE7\xFAcares
     durante a MOSTURA."
   m_isRightToLeft: 0
@@ -200,14 +200,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 45.2
+  m_fontSize: 44.2
   m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
   m_fontSizeMax: 55
   m_fontStyle: 0
-  m_textAlignment: 520
+  m_textAlignment: 4104
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 46359601}
-    characterCount: 231
+    characterCount: 232
     spriteCount: 0
-    spaceCount: 37
+    spaceCount: 38
     wordCount: 38
     linkCount: 0
     lineCount: 6
@@ -770,7 +770,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 258679023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &258679023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1286,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466027353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &466027353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,7 +2263,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 1.25
   m_canvasRenderer: {fileID: 843282715}
   m_TextComponent: {fileID: 1315099404}
   m_materialReferenceIndex: 1
@@ -2791,7 +2813,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969612146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &969612146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3463,7 @@ GameObject:
   - component: {fileID: 1315099405}
   - component: {fileID: 1315099404}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3474,7 +3507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Voc\xEA ainda n\xE3o desbloqueou essa trilha"
+  m_text: "Voc\xEA ainda n\xE3o desbloqueou essa fase do processo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c66a48638bb7c741b28547788f0c9d8, type: 2}
   m_sharedMaterial: {fileID: 21052247315630278, guid: 0c66a48638bb7c741b28547788f0c9d8,
@@ -3783,7 +3816,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1024022225}
-        m_MethodName: GoToFirstGame
+        m_MethodName: GoToDialogueScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4200,7 +4233,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1526715279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1526715279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5190,7 +5234,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838008686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1838008686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5377,7 +5432,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1956684084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1956684084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5492,7 +5558,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2072757170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243287288}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2072757170
 MonoBehaviour:
   m_ObjectHideFlags: 0
