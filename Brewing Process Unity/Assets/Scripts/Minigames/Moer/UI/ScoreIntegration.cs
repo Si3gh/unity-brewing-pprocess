@@ -13,6 +13,7 @@ public class ScoreIntegration : MonoBehaviour
     [Header("Range de valores para ser processado.")]
     [SerializeField] [Range(0, 2)] private float minimumToProcess = 0.8f;
     [SerializeField] [Range(0, 2)] private float maximumToProcess = 1.2f;
+    [SerializeField] private float minimumTime = 20f;
 
     [Header("Mensagens do placar")]
     [SerializeField] private string loseMessage;
@@ -83,7 +84,7 @@ public class ScoreIntegration : MonoBehaviour
 
         starObjects[1].Activate();
 
-        if (remainingTime > 20f)
+        if (remainingTime < minimumTime)
         {
             return;
         }
