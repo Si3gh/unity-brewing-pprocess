@@ -16,6 +16,10 @@ public class ScoreIntegration : MonoBehaviour
     [SerializeField] private float minimumTime = 20f;
 
     [Header("Mensagens do placar")]
+    [SerializeField] private Reward TerribleReward;
+    [SerializeField] private Reward PerfectReward;
+
+    [Header("Mensagens do placar")]
     [SerializeField] private string loseMessage;
     [SerializeField] private string inconsistentMessage;
     [SerializeField] private string lowProcessedAmountMessage;
@@ -30,6 +34,7 @@ public class ScoreIntegration : MonoBehaviour
 #pragma warning restore 0649
 
     private MachineController _machineController;
+    private RewardAdder _rewardAdder;
     private GrainColector _grainColector;
     private List<float> lowProcessedGrains;
     private List<float> perfectProcessedGrains;
@@ -37,6 +42,7 @@ public class ScoreIntegration : MonoBehaviour
 
     void Awake()
     {
+        _rewardAdder = FindObjectOfType<RewardAdder>();
         _grainColector = FindObjectOfType<GrainColector>();
         _machineController = FindObjectOfType<MachineController>();
         ResetGrainsCount();
@@ -90,6 +96,7 @@ public class ScoreIntegration : MonoBehaviour
         }
 
         starObjects[2].Activate();
+        _rewardAdder.AddReward(PerfectReward);
     }
 
     private void SetProcessedValue()
@@ -156,6 +163,11 @@ public class ScoreIntegration : MonoBehaviour
 
     private void SeparateIntoScore(List<Grain> grainsProcessed)
     {
+        if (grainsProcessed.Count == 0)
+        {
+            _rewardAdder.AddReward(TerribleReward);
+        }
+
         foreach (var grain in grainsProcessed)
         {
             if (grain.ProcessedValue < minimumToProcess)
