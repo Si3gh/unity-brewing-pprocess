@@ -10,19 +10,24 @@ namespace Request
 {
     public class HttpRequest : MonoBehaviour
     {
-        private ErrorWindow _errorWindow;
+#pragma warning disable 0649
+        [SerializeField] private EnviromentPicker enviroment;
+        [SerializeField] private ErrorWindow errorWindow;
+#pragma warning restore 0649
 
-        [SerializeField] private string apiUrl = null;
+        private RequestUrl _requestUrl;
 
-        void Awake()
+        public void Awake()
         {
-            _errorWindow = gameObject.GetComponentInChildren<ErrorWindow>();
+            _requestUrl = enviroment.GetUrl();
         }
 
         public IEnumerator GetRequest<T>(string sufixo, Action<T> callbackSuccess,
             Dictionary<string, string> requestHeaders = null)
         {
-            var request = UnityWebRequest.Get($"{apiUrl}/{sufixo}");
+            ValidateUrl();
+
+            var request = UnityWebRequest.Get($"{_requestUrl.url}/{sufixo}");
 
             SetRequestHeaders(requestHeaders, request);
 
@@ -30,6 +35,7 @@ namespace Request
 
             HandleRequest(callbackSuccess, request);
         }
+
 
         public IEnumerator PostRequest<T>(string sufixo, object body, Action<T> callbackSuccess,
             Dictionary<string, string> requestHeaders = null)
@@ -113,9 +119,11 @@ namespace Request
 
         private UnityWebRequest BuildWebRequest(string sufixo, object body, Dictionary<string, string> requestHeaders)
         {
+            ValidateUrl();
+
             var bodyAsJson = JsonUtility.ToJson(body);
 
-            var request = new UnityWebRequest($"{apiUrl}/{sufixo}")
+            var request = new UnityWebRequest($"{_requestUrl.url}/{sufixo}")
             {
                 downloadHandler = new DownloadHandlerBuffer()
             };
@@ -155,7 +163,17 @@ namespace Request
             }
             else
             {
-                callback.Invoke();
+                if (callback != null)
+                {
+                    callback.Invoke();
+                }
+            }
+        }
+        private void ValidateUrl()
+        {
+            if (!_requestUrl.isValid)
+            {
+                Debug.Log("Não está apontando para produção");
             }
         }
 
@@ -170,7 +188,7 @@ namespace Request
 
         private void HandleError(string errorMessage)
         {
-            _errorWindow.ShowError(errorMessage);
+            errorWindow.ShowError(errorMessage);
         }
 
         [Serializable]
