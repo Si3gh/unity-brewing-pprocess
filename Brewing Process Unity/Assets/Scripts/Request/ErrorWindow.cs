@@ -16,7 +16,7 @@ namespace Request
             window.SetActive(true);
             textField.text = "Parece que houve um erro";
 
-            if (errorMessage.Length != 0)
+            if (errorMessage != null && errorMessage.Length != 0)
             {
                 textField.text = errorMessage;
             }

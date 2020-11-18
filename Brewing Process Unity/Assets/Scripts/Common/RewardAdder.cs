@@ -10,6 +10,7 @@ public class RewardAdder : MonoBehaviour
     [SerializeField] private Image RewardImage;
     [SerializeField] private TextMeshProUGUI RewardTitle;
     [SerializeField] private TextMeshProUGUI RewardDescription;
+    [SerializeField] private RewardAddBehaviour RewardAddBehaviour;
 #pragma warning restore 0649
 
     public void AddReward(Reward reward)
@@ -22,6 +23,7 @@ public class RewardAdder : MonoBehaviour
         {
             PlayerPrefs.SetString("Rewards", $"{rewardString}{reward.rewardGameId};");
             ShowReward(reward);
+            RewardAddBehaviour.AddReward(reward);
         }
     }
 
