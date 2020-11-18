@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604a0c6e3befab443a54535ac1143863, type: 3}
   m_Name: Enviroment
   m_EditorClassIdentifier: 
-  enviroment: 3
+  enviroment: 0
   prodUrl: {fileID: 11400000, guid: e449491f0f8c4254c836bb268c4f1f88, type: 2}
   stagingUrl: {fileID: 11400000, guid: 9941ad919a2a46d41bea639cf9082e9a, type: 2}
   devUrl: {fileID: 11400000, guid: df1676af7c4bc7444a76759f96ab9aa1, type: 2}
